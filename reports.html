@@ -1,0 +1,280 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Reports | Unity Fund</title>
+  <meta name="description" content="Unity Fund distribution reports, annual reports, audited financial statements and IRS filings.">
+  <meta name="theme-color" content="#F7F5F0">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Unity Fund">
+  <meta property="og:title" content="Reports | Unity Fund">
+  <meta property="og:description" content="Unity Fund distribution reports, annual reports, audited financial statements and IRS filings.">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="assets/fonts/libre-franklin-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/source-serif-4-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><path fill="currentColor" d="M0 0h13v32H0zM15 0h8v32h-8zM25 0h4.5v32H25zM31.5 0H32v32h-.5z"/></svg>
+        <span class="brand-name">Unity Fund</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+        <span class="nav-toggle-bars" aria-hidden="true"></span>
+        Menu
+      </button>
+      <nav id="site-nav" class="site-nav" aria-label="Main">
+        <ul>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="methodology.html">Methodology</a></li>
+          <li><a href="reports.html" aria-current="page">Reports</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+        <a class="button button-primary button-small" href="contribute.html">Contribute</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <header class="page-header">
+      <div class="container">
+        <ol class="breadcrumb">
+          <li><a href="index.html">Home</a></li>
+          <li aria-current="page">Reports</li>
+        </ol>
+        <h1 class="page-title">Reports and financials</h1>
+        <p class="lead">Every distribution, every grant and every dollar of operating cost, published on a fixed schedule. Distribution reports appear within ten days of each payment date.</p>
+        <dl class="stat-strip">
+          <div><dt>Distributed since 2023</dt><dd data-fact="distributedToDate" data-format="short">$16.82M</dd></div>
+          <div><dt>Quarterly distributions</dt><dd>14</dd></div>
+          <div><dt>Grants made</dt><dd>486</dd></div>
+          <div><dt>Fees on contributions</dt><dd>None</dd></div>
+        </dl>
+      </div>
+    </header>
+
+    <section class="section" aria-labelledby="history-title">
+      <div class="container">
+        <div class="section-head">
+          <h2 class="section-title" id="history-title">Distribution history</h2>
+          <p>The full amount pooled in each quarter, granted to every holding at its published weight. Distributions after the fourth quarter are the largest each year because of year-end giving.</p>
+        </div>
+        <div class="chart-block">
+          <div class="chart-toolbar">
+            <div>
+              <h3>Quarterly distributions, 2023 to 2026</h3>
+              <p class="chart-summary">Total granted to all holdings each quarter, in US dollars</p>
+            </div>
+            <div class="toggle-group" role="group" aria-label="Show distributions as" data-chart-toggle>
+              <button type="button" data-view="chart" aria-pressed="true">Chart</button>
+              <button type="button" data-view="table" aria-pressed="false">Table</button>
+            </div>
+          </div>
+          <div data-view-chart>
+            <div class="chart" data-dist-chart></div>
+          </div>
+          <div data-view-table hidden>
+            <div class="table-wrap">
+              <table class="data-table" data-dist-table>
+                <caption class="visually-hidden">Quarterly distributions</caption>
+                <thead>
+                  <tr>
+                    <th scope="col">Quarter</th>
+                    <th scope="col">Paid</th>
+                    <th scope="col" class="is-num">Grants</th>
+                    <th scope="col" class="is-num">Amount</th>
+                  </tr>
+                </thead>
+                <tbody></tbody>
+                <tfoot>
+                  <tr><th scope="row">Total</th><td></td><td></td><td class="is-num" data-dist-total></td></tr>
+                </tfoot>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-tint" aria-labelledby="quarterly-title">
+      <div class="container split">
+        <div>
+          <h2 class="section-title" id="quarterly-title">Distribution reports</h2>
+          <p>Each report lists every grant in the distribution, the weight it was based on and the date it was paid. Contributors also receive a personal statement showing how their own share was divided.</p>
+          <p class="mt-md"><a class="text-link" href="mailto:hello@unityfund.org?subject=Earlier%20distribution%20reports">Request earlier reports</a></p>
+        </div>
+        <ul class="doc-list" data-report-list="8"></ul>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="annual-title">
+      <div class="container">
+        <div class="section-head">
+          <h2 class="section-title" id="annual-title">Annual reports and filings</h2>
+          <p>Financial statements are audited each year by an independent accounting firm. Our IRS Form 990 is filed annually and posted here once accepted.</p>
+        </div>
+        <div class="report-grid">
+          <div>
+            <h3 class="change-heading">Annual reports</h3>
+            <ul class="doc-list">
+              <li>
+                <div><h3>2025 Annual Report</h3><p>Results, committee decisions and the year's changes to the portfolio.</p></div>
+                <a class="doc-link" href="reports/unity-fund-annual-report-2025.pdf">PDF<span class="visually-hidden">, 2025 Annual Report</span></a>
+              </li>
+              <li>
+                <div><h3>2024 Annual Report</h3><p>The fund's second year, including its first full rebalance.</p></div>
+                <a class="doc-link" href="reports/unity-fund-annual-report-2024.pdf">PDF<span class="visually-hidden">, 2024 Annual Report</span></a>
+              </li>
+              <li>
+                <div><h3>2023 Annual Report</h3><p>The founding year and the first four distributions.</p></div>
+                <a class="doc-link" href="reports/unity-fund-annual-report-2023.pdf">PDF<span class="visually-hidden">, 2023 Annual Report</span></a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="change-heading">Financial statements and tax filings</h3>
+            <ul class="doc-list">
+              <li>
+                <div><h3>Audited financial statements, 2025</h3><p>Independent auditor's report with statements of activities and financial position.</p></div>
+                <a class="doc-link" href="reports/unity-fund-audited-financials-2025.pdf">PDF<span class="visually-hidden">, audited financial statements 2025</span></a>
+              </li>
+              <li>
+                <div><h3>Audited financial statements, 2024</h3><p>Independent auditor's report with statements of activities and financial position.</p></div>
+                <a class="doc-link" href="reports/unity-fund-audited-financials-2024.pdf">PDF<span class="visually-hidden">, audited financial statements 2024</span></a>
+              </li>
+              <li>
+                <div><h3>IRS Form 990, 2024</h3><p>Return of Organization Exempt From Income Tax.</p></div>
+                <a class="doc-link" href="reports/unity-fund-form-990-2024.pdf">PDF<span class="visually-hidden">, Form 990 for 2024</span></a>
+              </li>
+              <li>
+                <div><h3>IRS determination letter</h3><p>Confirmation of 501(c)(3) public charity status.</p></div>
+                <a class="doc-link" href="reports/unity-fund-determination-letter.pdf">PDF<span class="visually-hidden">, IRS determination letter</span></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-tint" aria-labelledby="summary-title">
+      <div class="container">
+        <div class="section-head">
+          <h2 class="section-title" id="summary-title">2025 at a glance</h2>
+          <p>Unity Fund keeps two separate accounts. The fund account holds contributions until they are distributed. The operating account pays for staff, research and systems, and is funded by a separate group of operating supporters.</p>
+        </div>
+        <div class="report-grid">
+          <div class="table-wrap">
+            <table class="data-table ledger">
+              <caption>Fund account</caption>
+              <thead>
+                <tr><th scope="col">Contributions received in 2025</th><th scope="col" class="is-num">Amount</th></tr>
+              </thead>
+              <tbody>
+                <tr><th scope="row">Contributions pooled</th><td class="is-num">$6,700,000</td></tr>
+                <tr><th scope="row">Granted to holdings</th><td class="is-num">$6,700,000</td></tr>
+                <tr><th scope="row">Used for operating costs</th><td class="is-num">$0</td></tr>
+              </tbody>
+              <tfoot>
+                <tr><th scope="row">Share of contributions granted</th><td class="is-num">100%</td></tr>
+              </tfoot>
+            </table>
+          </div>
+          <div class="table-wrap">
+            <table class="data-table ledger">
+              <caption>Operating account</caption>
+              <thead>
+                <tr><th scope="col">Operating expenses in 2025</th><th scope="col" class="is-num">Amount</th></tr>
+              </thead>
+              <tbody>
+                <tr><th scope="row">Research and due diligence</th><td class="is-num">$318,000</td></tr>
+                <tr><th scope="row">Contributor services and reporting</th><td class="is-num">$204,000</td></tr>
+                <tr><th scope="row">Administration and audit</th><td class="is-num">$176,000</td></tr>
+                <tr><th scope="row">Fundraising for operations</th><td class="is-num">$124,000</td></tr>
+              </tbody>
+              <tfoot>
+                <tr><th scope="row">Total, paid by operating supporters</th><td class="is-num">$822,000</td></tr>
+              </tfoot>
+            </table>
+          </div>
+        </div>
+        <p class="note">Operating costs are never taken from contributions to the fund. They are paid by founding donors and foundation grants given specifically for that purpose.</p>
+      </div>
+    </section>
+
+    <section class="cta-band" aria-labelledby="cta-title">
+      <div class="container split">
+        <h2 class="section-title" id="cta-title">Get each report the day it is published.</h2>
+        <div>
+          <p>Distribution reports are sent by email four times a year. Contributors receive them automatically.</p>
+          <div class="button-row mt-md">
+            <a class="button button-light" href="contribute.html">Make a contribution</a>
+            <a class="button button-outline-light" href="#signup-email">Subscribe to reports</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a class="brand" href="index.html">
+            <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><path fill="currentColor" d="M0 0h13v32H0zM15 0h8v32h-8zM25 0h4.5v32H25zM31.5 0H32v32h-.5z"/></svg>
+            <span class="brand-name">Unity Fund</span>
+          </a>
+          <p>An index fund for charitable giving. One contribution, distributed every quarter across a published portfolio of vetted nonprofits.</p>
+        </div>
+        <div class="footer-cols">
+          <div>
+            <h2>The fund</h2>
+            <ul>
+              <li><a href="portfolio.html">Portfolio</a></li>
+              <li><a href="methodology.html">Methodology</a></li>
+              <li><a href="reports.html">Reports</a></li>
+              <li><a href="contribute.html">Contribute</a></li>
+            </ul>
+          </div>
+          <div>
+            <h2>Organization</h2>
+            <ul>
+              <li><a href="about.html">About</a></li>
+              <li><a href="about.html#governance">Governance</a></li>
+              <li><a href="about.html#policies">Policies</a></li>
+              <li><a href="about.html#contact">Contact</a></li>
+            </ul>
+          </div>
+          <div>
+            <h2>Quarterly reports by email</h2>
+            <p>Each distribution report, sent the day it is published.</p>
+            <form class="signup" data-signup novalidate>
+              <label class="signup-label" for="signup-email">Email address</label>
+              <div class="signup-row">
+                <input id="signup-email" type="email" autocomplete="email">
+                <button class="button button-light button-small" type="submit">Subscribe</button>
+              </div>
+              <p class="signup-status" role="status"></p>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>Unity Fund is a 501(c)(3) public charity, EIN 00-0000000. Contributions are tax deductible to the extent allowed by law.</p>
+        <ul class="footer-legal">
+          <li><a href="about.html#policies">Donor privacy</a></li>
+          <li><a href="about.html#contact">Contact</a></li>
+          <li>&copy; 2026 Unity Fund</li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

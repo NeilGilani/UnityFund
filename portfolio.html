@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Portfolio | Unity Fund</title>
+  <meta name="description" content="Every organization held by Unity Fund, with its cause area, weight in the fund and most recent quarterly grant.">
+  <meta name="theme-color" content="#F7F5F0">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Unity Fund">
+  <meta property="og:title" content="Portfolio | Unity Fund">
+  <meta property="og:description" content="Every organization held by Unity Fund, with its cause area, weight in the fund and most recent quarterly grant.">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="assets/fonts/libre-franklin-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/source-serif-4-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><path fill="currentColor" d="M0 0h13v32H0zM15 0h8v32h-8zM25 0h4.5v32H25zM31.5 0H32v32h-.5z"/></svg>
+        <span class="brand-name">Unity Fund</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+        <span class="nav-toggle-bars" aria-hidden="true"></span>
+        Menu
+      </button>
+      <nav id="site-nav" class="site-nav" aria-label="Main">
+        <ul>
+          <li><a href="portfolio.html" aria-current="page">Portfolio</a></li>
+          <li><a href="methodology.html">Methodology</a></li>
+          <li><a href="reports.html">Reports</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+        <a class="button button-primary button-small" href="contribute.html">Contribute</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <header class="page-header">
+      <div class="container">
+        <ol class="breadcrumb">
+          <li><a href="index.html">Home</a></li>
+          <li aria-current="page">Portfolio</li>
+        </ol>
+        <h1 class="page-title">Portfolio</h1>
+        <p class="lead">Every organization Unity Fund holds, with its weight in the fund and the grant it received in the most recent distribution. Weights were last set at the <span data-fact="lastRebalance">January 2026</span> rebalance and apply until the next one.</p>
+        <dl class="stat-strip">
+          <div><dt>Organizations</dt><dd data-fact="organizations">39</dd></div>
+          <div><dt>Cause areas</dt><dd data-fact="causeAreas">8</dd></div>
+          <div><dt>Largest holding</dt><dd>4.5%</dd></div>
+          <div><dt><span data-last-quarter>Q2 2026</span> distribution</dt><dd>$2.21M</dd></div>
+        </dl>
+      </div>
+    </header>
+
+    <section class="section" aria-labelledby="areas-title">
+      <div class="container" data-alloc-group>
+        <div class="section-head">
+          <h2 class="section-title" id="areas-title">Allocation by cause area</h2>
+          <p>Cause area weights are fixed for the year. Within each area, organizations are weighted by cost effectiveness and room for more funding, within the limits set out in the <a href="methodology.html#weighting">methodology</a>.</p>
+        </div>
+        <div data-alloc-bar></div>
+        <ul class="alloc-legend" data-alloc-legend></ul>
+      </div>
+    </section>
+
+    <section class="section section-tint" id="holdings" aria-labelledby="all-title">
+      <div class="container" data-holdings-explorer>
+        <div class="section-head">
+          <h2 class="section-title" id="all-title">All holdings</h2>
+          <p>Filter by cause area, search by name or region, and select a column heading to sort. Grants shown are from the <span data-last-quarter>Q2 2026</span> distribution.</p>
+        </div>
+
+        <div class="filters">
+          <div class="filters-left">
+            <div class="filter-group">
+              <label for="filter-area">Cause area</label>
+              <select id="filter-area" class="select">
+                <option value="all">All cause areas</option>
+              </select>
+            </div>
+            <div class="filter-group">
+              <label for="filter-search">Search by name, region or keyword</label>
+              <input id="filter-search" class="search" type="search" autocomplete="off">
+            </div>
+          </div>
+          <button type="button" class="button button-outline button-small" data-csv>Download as CSV</button>
+        </div>
+
+        <p class="result-count" data-result-count role="status"></p>
+        <div class="table-wrap">
+          <table class="data-table">
+            <caption class="visually-hidden">All holdings in the fund</caption>
+            <thead>
+              <tr>
+                <th scope="col" data-sort="name"><button class="sort-button" type="button">Organization</button></th>
+                <th scope="col" data-sort="area" class="hide-sm"><button class="sort-button" type="button">Cause area</button></th>
+                <th scope="col" data-sort="region" class="hide-sm"><button class="sort-button" type="button">Where they work</button></th>
+                <th scope="col" data-sort="since" class="is-num hide-sm"><button class="sort-button" type="button">Since</button></th>
+                <th scope="col" data-sort="weight" class="is-num" aria-sort="descending"><button class="sort-button" type="button">Weight</button></th>
+                <th scope="col" class="is-num hide-sm"><span data-last-quarter>Q2 2026</span> grant</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+        <p class="empty-state" data-empty hidden>No organizations match that search. Try another name, region or cause area.</p>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="changes-title">
+      <div class="container">
+        <div class="section-head">
+          <h2 class="section-title" id="changes-title">Changes at the <span data-fact="lastRebalance">January 2026</span> rebalance</h2>
+          <p>The allocation committee reviews every holding and every nominated candidate once a year. These are the changes that took effect with the most recent rebalance.</p>
+        </div>
+        <div class="split split-even">
+          <div>
+            <h3 class="change-heading">Added</h3>
+            <ul class="change-list" data-changes="added"></ul>
+          </div>
+          <div>
+            <h3 class="change-heading">Removed</h3>
+            <ul class="change-list" data-changes="removed"></ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-band" aria-labelledby="cta-title">
+      <div class="container split">
+        <h2 class="section-title" id="cta-title">Support the whole portfolio at once.</h2>
+        <div>
+          <p>A single contribution is divided across every organization on this page, at the weights shown.</p>
+          <div class="button-row mt-md">
+            <a class="button button-light" href="contribute.html">Make a contribution</a>
+            <a class="button button-outline-light" href="methodology.html">How weights are set</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a class="brand" href="index.html">
+            <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><path fill="currentColor" d="M0 0h13v32H0zM15 0h8v32h-8zM25 0h4.5v32H25zM31.5 0H32v32h-.5z"/></svg>
+            <span class="brand-name">Unity Fund</span>
+          </a>
+          <p>An index fund for charitable giving. One contribution, distributed every quarter across a published portfolio of vetted nonprofits.</p>
+        </div>
+        <div class="footer-cols">
+          <div>
+            <h2>The fund</h2>
+            <ul>
+              <li><a href="portfolio.html">Portfolio</a></li>
+              <li><a href="methodology.html">Methodology</a></li>
+              <li><a href="reports.html">Reports</a></li>
+              <li><a href="contribute.html">Contribute</a></li>
+            </ul>
+          </div>
+          <div>
+            <h2>Organization</h2>
+            <ul>
+              <li><a href="about.html">About</a></li>
+              <li><a href="about.html#governance">Governance</a></li>
+              <li><a href="about.html#policies">Policies</a></li>
+              <li><a href="about.html#contact">Contact</a></li>
+            </ul>
+          </div>
+          <div>
+            <h2>Quarterly reports by email</h2>
+            <p>Each distribution report, sent the day it is published.</p>
+            <form class="signup" data-signup novalidate>
+              <label class="signup-label" for="signup-email">Email address</label>
+              <div class="signup-row">
+                <input id="signup-email" type="email" autocomplete="email">
+                <button class="button button-light button-small" type="submit">Subscribe</button>
+              </div>
+              <p class="signup-status" role="status"></p>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>Unity Fund is a 501(c)(3) public charity, EIN 00-0000000. Contributions are tax deductible to the extent allowed by law.</p>
+        <ul class="footer-legal">
+          <li><a href="about.html#policies">Donor privacy</a></li>
+          <li><a href="about.html#contact">Contact</a></li>
+          <li>&copy; 2026 Unity Fund</li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

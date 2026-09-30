@@ -1,0 +1,374 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Unity Fund | An index fund for charitable giving</title>
+  <meta name="description" content="Unity Fund pools contributions and distributes them every quarter across a published portfolio of vetted nonprofits in eight cause areas. No fee is taken from your gift.">
+  <meta name="theme-color" content="#F7F5F0">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Unity Fund">
+  <meta property="og:title" content="Unity Fund | An index fund for charitable giving">
+  <meta property="og:description" content="Unity Fund pools contributions and distributes them every quarter across a published portfolio of vetted nonprofits in eight cause areas. No fee is taken from your gift.">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="assets/fonts/libre-franklin-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/source-serif-4-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-current="page">
+        <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><path fill="currentColor" d="M0 0h13v32H0zM15 0h8v32h-8zM25 0h4.5v32H25zM31.5 0H32v32h-.5z"/></svg>
+        <span class="brand-name">Unity Fund</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+        <span class="nav-toggle-bars" aria-hidden="true"></span>
+        Menu
+      </button>
+      <nav id="site-nav" class="site-nav" aria-label="Main">
+        <ul>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="methodology.html">Methodology</a></li>
+          <li><a href="reports.html">Reports</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+        <a class="button button-primary button-small" href="contribute.html">Contribute</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <h1 class="display">An index fund for charitable giving.</h1>
+          <p class="lead">Unity Fund pools contributions from thousands of donors and distributes them every quarter across <span data-fact="organizations">39</span> vetted nonprofits in eight cause areas. The allocation is public, every grant is published, and no fee is taken from your gift.</p>
+          <div class="button-row">
+            <a class="button button-primary" href="contribute.html">Make a contribution</a>
+            <a class="button button-outline" href="portfolio.html">View the portfolio</a>
+          </div>
+        </div>
+
+        <aside class="facts" aria-labelledby="facts-title">
+          <div class="facts-head">
+            <h2 id="facts-title">Fund facts</h2>
+            <p>As of <span data-fact="asOf">September 30, 2026</span></p>
+          </div>
+          <div class="facts-hero">
+            <span class="facts-hero-value" data-fact="distributedToDate" data-format="words">$16.8 million</span>
+            <span class="facts-hero-label">Distributed to organizations since 2023</span>
+          </div>
+          <dl>
+            <div class="facts-row"><dt>Organizations held</dt><dd data-fact="organizations">39</dd></div>
+            <div class="facts-row"><dt>Cause areas</dt><dd data-fact="causeAreas">8</dd></div>
+            <div class="facts-row"><dt>Fee on contributions</dt><dd>None</dd></div>
+            <div class="facts-row"><dt>Pooled this quarter</dt><dd data-fact="pooledThisQuarter" data-format="usd">$2,480,000</dd></div>
+            <div class="facts-row"><dt>Next distribution</dt><dd data-fact="nextDistribution">October 15, 2026</dd></div>
+          </dl>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section" id="allocation" aria-labelledby="allocation-title">
+      <div class="container split" data-alloc-group>
+        <div>
+          <h2 class="section-title" id="allocation-title">Where each contribution goes</h2>
+          <p>Every contribution is divided the same way: first across eight cause areas, then across the organizations inside each one. The weights are set once a year by an independent allocation committee and published in full.</p>
+
+          <div class="calc" data-calc>
+            <label class="calc-label" for="calc-amount">Try an amount</label>
+            <div class="money-input">
+              <span aria-hidden="true">$</span>
+              <input id="calc-amount" type="text" inputmode="decimal" value="100" autocomplete="off">
+            </div>
+            <div class="presets" role="group" aria-label="Example amounts">
+              <button type="button" class="preset" data-value="50" aria-pressed="false">$50</button>
+              <button type="button" class="preset" data-value="100" aria-pressed="true">$100</button>
+              <button type="button" class="preset" data-value="500" aria-pressed="false">$500</button>
+              <button type="button" class="preset" data-value="1000" aria-pressed="false">$1,000</button>
+            </div>
+          </div>
+          <p class="mt-md"><a class="text-link" href="contribute.html?amount=100" data-give-link>Contribute this amount</a></p>
+        </div>
+
+        <div>
+          <div data-alloc-bar></div>
+          <div class="table-wrap mt-md">
+            <table class="data-table" data-alloc-table>
+              <caption class="visually-hidden">How a contribution is divided by cause area</caption>
+              <thead>
+                <tr>
+                  <th scope="col">Cause area</th>
+                  <th scope="col" class="is-num hide-sm">Organizations</th>
+                  <th scope="col" class="is-num">Weight</th>
+                  <th scope="col" class="is-num">Your amount</th>
+                </tr>
+              </thead>
+              <tbody></tbody>
+              <tfoot>
+                <tr>
+                  <th scope="row">Total</th>
+                  <td class="is-num hide-sm" data-fact="organizations">39</td>
+                  <td class="is-num">100%</td>
+                  <td class="is-num" data-total-amount>$100.00</td>
+                </tr>
+              </tfoot>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-tint" aria-labelledby="how-title">
+      <div class="container">
+        <div class="section-head">
+          <h2 class="section-title" id="how-title">How the fund works</h2>
+          <p class="lead">The same four steps, repeated every quarter since the fund opened in 2023.</p>
+        </div>
+        <ol class="steps">
+          <li>
+            <h3>You contribute</h3>
+            <p>Give once or on a schedule by card, bank transfer, stock, donor-advised fund or IRA distribution. You receive one tax receipt for the full amount.</p>
+          </li>
+          <li>
+            <h3>Gifts are pooled</h3>
+            <p>Every contribution received during the quarter joins a single pool. Nothing is deducted for our own costs, which are funded separately.</p>
+          </li>
+          <li>
+            <h3>The pool is distributed</h3>
+            <p>On the 15th of the month after each quarter closes, the full pool is granted to every organization in the portfolio at its published weight.</p>
+          </li>
+          <li>
+            <h3>Every grant is reported</h3>
+            <p>Each distribution is published line by line, and every contributor receives a statement showing where their share went.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="holdings-title">
+      <div class="container">
+        <div class="section-head-row">
+          <div class="section-head">
+            <h2 class="section-title" id="holdings-title">Largest holdings</h2>
+            <p>The ten organizations with the highest weights in the fund, and the grant each received in the <span data-last-quarter>Q2 2026</span> distribution.</p>
+          </div>
+          <a class="button button-outline button-small" href="portfolio.html"><span>View all <span data-fact="organizations">39</span> organizations</span></a>
+        </div>
+        <div class="table-wrap">
+          <table class="data-table" data-top-holdings="10">
+            <caption class="visually-hidden">Ten largest holdings by weight</caption>
+            <thead>
+              <tr>
+                <th scope="col">Organization</th>
+                <th scope="col" class="hide-sm">Cause area</th>
+                <th scope="col" class="hide-sm">Where they work</th>
+                <th scope="col" class="is-num">Weight</th>
+                <th scope="col" class="is-num hide-sm"><span data-last-quarter>Q2 2026</span> grant</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-tint" aria-labelledby="selection-title">
+      <div class="container split">
+        <div>
+          <h2 class="section-title" id="selection-title">How organizations are chosen</h2>
+          <p>No organization can pay or apply to be included. Candidates are nominated by researchers, program evaluators and existing holdings, then reviewed against four standards by an allocation committee with no financial ties to any of them.</p>
+          <p class="mt-md"><a class="text-link" href="methodology.html">Read the full methodology</a></p>
+        </div>
+        <ol class="criteria">
+          <li>
+            <div>
+              <h3>Evidence of results</h3>
+              <p>Programs are supported by independent evaluation or rigorous monitoring data, not anecdotes alone.</p>
+            </div>
+          </li>
+          <li>
+            <div>
+              <h3>Cost effectiveness</h3>
+              <p>Each dollar achieves more than it would at comparable organizations doing similar work.</p>
+            </div>
+          </li>
+          <li>
+            <div>
+              <h3>Transparency</h3>
+              <p>Audited financial statements, public reporting and a willingness to share what did not work.</p>
+            </div>
+          </li>
+          <li>
+            <div>
+              <h3>Room for more funding</h3>
+              <p>Additional money will expand the work, rather than sit in reserves.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+      <div class="container">
+        <dl class="limits">
+          <div><dt>Cap on any one organization</dt><dd>5%</dd></div>
+          <div><dt>Cap on any one cause area</dt><dd>20%</dd></div>
+          <div><dt>Floor for any one organization</dt><dd>1%</dd></div>
+          <div><dt>Portfolio rebalanced</dt><dd>Each January</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="history-title">
+      <div class="container">
+        <div class="section-head">
+          <h2 class="section-title" id="history-title">Distribution history</h2>
+          <p><span data-fact="distributedToDate" data-format="words">$16.8 million</span> has been granted across fourteen quarterly distributions. Distributions after the fourth quarter are the largest each year, reflecting year-end giving.</p>
+        </div>
+
+        <div class="chart-block">
+          <div class="chart-toolbar">
+            <div>
+              <h3>Quarterly distributions, 2023 to 2026</h3>
+              <p class="chart-summary">Total granted to all holdings each quarter, in US dollars</p>
+            </div>
+            <div class="toggle-group" role="group" aria-label="Show distributions as" data-chart-toggle>
+              <button type="button" data-view="chart" aria-pressed="true">Chart</button>
+              <button type="button" data-view="table" aria-pressed="false">Table</button>
+            </div>
+          </div>
+          <div data-view-chart>
+            <div class="chart" data-dist-chart></div>
+          </div>
+          <div data-view-table hidden>
+            <div class="table-wrap">
+              <table class="data-table" data-dist-table>
+                <caption class="visually-hidden">Quarterly distributions</caption>
+                <thead>
+                  <tr>
+                    <th scope="col">Quarter</th>
+                    <th scope="col">Paid</th>
+                    <th scope="col" class="is-num">Grants</th>
+                    <th scope="col" class="is-num">Amount</th>
+                  </tr>
+                </thead>
+                <tbody></tbody>
+                <tfoot>
+                  <tr><th scope="row">Total</th><td></td><td></td><td class="is-num" data-dist-total></td></tr>
+                </tfoot>
+              </table>
+            </div>
+          </div>
+        </div>
+        <p class="table-foot-link"><a class="text-link" href="reports.html">See every report and financial statement</a></p>
+      </div>
+    </section>
+
+    <section class="section section-tint" aria-labelledby="faq-title">
+      <div class="container split">
+        <div>
+          <h2 class="section-title" id="faq-title">Common questions</h2>
+          <p>Something else on your mind? Write to <a href="mailto:hello@unityfund.org">hello@unityfund.org</a> and a member of our staff will reply within two business days.</p>
+        </div>
+        <div class="faq">
+          <details>
+            <summary>Is my contribution tax deductible?</summary>
+            <div><p>Yes. Unity Fund is a 501(c)(3) public charity, and contributions are deductible to the extent allowed by law. You receive a single receipt for the full amount, however many organizations it reaches.</p></div>
+          </details>
+          <details>
+            <summary>How does Unity Fund pay for its own operations?</summary>
+            <div><p>Our staff, research and systems are paid from a separate operating account, supported by founding donors and foundation grants. Contributions to the fund itself are never used for operating costs.</p></div>
+          </details>
+          <details>
+            <summary>Can I choose which cause areas receive my money?</summary>
+            <div><p>No. Every contribution follows the same published allocation, which keeps the fund diversified, simple and inexpensive to run. If you want to support one organization in particular, every holding is listed on the <a href="portfolio.html">portfolio page</a> so you can give to it directly.</p></div>
+          </details>
+          <details>
+            <summary>When does my money reach the organizations?</summary>
+            <div><p>Contributions are pooled for the quarter and distributed on the 15th of January, April, July and October. A gift made today is included in the next distribution.</p></div>
+          </details>
+          <details>
+            <summary>What happens when an organization is removed?</summary>
+            <div><p>Its share is divided among the remaining holdings in the same cause area until the next rebalance. Every removal, and the reason for it, is published on the portfolio page.</p></div>
+          </details>
+          <details>
+            <summary>Can I give stock, or give from a donor-advised fund or IRA?</summary>
+            <div><p>Yes. We accept grants from donor-advised funds, qualified charitable distributions from IRAs, transfers of appreciated stock and bank transfers. Instructions are on the <a href="contribute.html#other-ways">contribution page</a>.</p></div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-band" aria-labelledby="cta-title">
+      <div class="container split">
+        <h2 class="section-title" id="cta-title">One contribution, <span data-fact="organizations">39</span> organizations.</h2>
+        <div>
+          <p>Contributions made this quarter are included in the <span data-fact="nextDistribution">October 15, 2026</span> distribution.</p>
+          <div class="button-row mt-md">
+            <a class="button button-light" href="contribute.html">Make a contribution</a>
+            <a class="button button-outline-light" href="reports.html">Read the latest report</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a class="brand" href="index.html">
+            <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><path fill="currentColor" d="M0 0h13v32H0zM15 0h8v32h-8zM25 0h4.5v32H25zM31.5 0H32v32h-.5z"/></svg>
+            <span class="brand-name">Unity Fund</span>
+          </a>
+          <p>An index fund for charitable giving. One contribution, distributed every quarter across a published portfolio of vetted nonprofits.</p>
+        </div>
+        <div class="footer-cols">
+          <div>
+            <h2>The fund</h2>
+            <ul>
+              <li><a href="portfolio.html">Portfolio</a></li>
+              <li><a href="methodology.html">Methodology</a></li>
+              <li><a href="reports.html">Reports</a></li>
+              <li><a href="contribute.html">Contribute</a></li>
+            </ul>
+          </div>
+          <div>
+            <h2>Organization</h2>
+            <ul>
+              <li><a href="about.html">About</a></li>
+              <li><a href="about.html#governance">Governance</a></li>
+              <li><a href="about.html#policies">Policies</a></li>
+              <li><a href="about.html#contact">Contact</a></li>
+            </ul>
+          </div>
+          <div>
+            <h2>Quarterly reports by email</h2>
+            <p>Each distribution report, sent the day it is published.</p>
+            <form class="signup" data-signup novalidate>
+              <label class="signup-label" for="signup-email">Email address</label>
+              <div class="signup-row">
+                <input id="signup-email" type="email" autocomplete="email">
+                <button class="button button-light button-small" type="submit">Subscribe</button>
+              </div>
+              <p class="signup-status" role="status"></p>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>Unity Fund is a 501(c)(3) public charity, EIN 00-0000000. Contributions are tax deductible to the extent allowed by law.</p>
+        <ul class="footer-legal">
+          <li><a href="about.html#policies">Donor privacy</a></li>
+          <li><a href="about.html#contact">Contact</a></li>
+          <li>&copy; 2026 Unity Fund</li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
